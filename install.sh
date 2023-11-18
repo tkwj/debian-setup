@@ -38,3 +38,15 @@ mv thorium.list /etc/apt/sources.list.d/
 nala update
 nala install thorium-browser -y
 
+mkdir -p suckless
+cd suckless
+git clone https://git.suckless.org/dmenu
+cd dmenu
+make clean install
+cd ..
+git clone https://github.com/tkwj/dwm
+cd dwm
+make clean install
+
+cp dwm.desktop /usr/share/xsessions/
+
